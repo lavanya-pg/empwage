@@ -22,6 +22,6 @@ public class Emp {
 		else {
 			System.out.println("Employee is absent");
 		}
-			
+			System.out.println("employee wage is :" + dailywage);
 		}
 }
