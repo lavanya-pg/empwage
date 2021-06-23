@@ -8,19 +8,34 @@ public class Emp {
 		int WAGE_PERHOUR = 20;
 		int FULLDAY_HOUR = 8;
 		int PARTTIME_HOUR = 4;
+		int NUM_OF_WORKINGDAYS = 20;
 		int dailywage = 0;
 		double empcheck = Math.floor(Math.random()*10)%3;
 		System.out.println(empcheck);
-		if(IS_FULLTIME_PRESENT == empcheck) {
-		System.out.println("Employee is present");
-		dailywage = WAGE_PERHOUR * FULLDAY_HOUR;
-		} 
-		else if(IS_PARTTIME_PRESENT == empcheck) {
+//		if(IS_FULLTIME_PRESENT == empcheck) {
+//		System.out.println("Employee is present");
+//		dailywage = WAGE_PERHOUR * FULLDAY_HOUR;
+//		} 
+//		else if(IS_PARTTIME_PRESENT == empcheck) {
+//			System.out.println("Employee is present for partime");
+//			dailywage = WAGE_PERHOUR * PARTTIME_HOUR;
+//			}
+//		else {
+//			System.out.println("Employee is absent");
+//		}
+		switch ((int)empcheck) {
+		case 1: 
+			System.out.println("Employee is present");
+			dailywage = WAGE_PERHOUR * FULLDAY_HOUR;
+			break;
+		case 2 : 
 			System.out.println("Employee is present for partime");
 			dailywage = WAGE_PERHOUR * PARTTIME_HOUR;
-			}
-		else {
+			break;
+
+		default:
 			System.out.println("Employee is absent");
+			
 		}
 			System.out.println("employee wage is :" + dailywage);
 		}
